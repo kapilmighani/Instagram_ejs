@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram</title>
+    <style>
+        img{
+            height: 250px;
+            width: 300px;
+        }
+        
+        #hr{
+            display: flex;
+        }
+        .dj{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>this page belongs <%=data.name%></h3>
+    <button>follow</button>
+    <button>Message</button>
+    <p>followers :<%=data.followers %></p>
+    <p>following :<%=data.following %></p>
+    <hr>
+    <div id="hr">
+        <% for(let post of data.posts){%>
+           <div class="dj">
+            <img src="<%=post.image%>" alt="">
+            <p>likes:    <%=post.likes%></p>
+            <p>comments: <%=post.comments%> </p>
+           </div>
+    
+        <% } %>
+    </div>
+
+</body>
+</html>
